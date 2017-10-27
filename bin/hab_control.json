@@ -12,7 +12,8 @@
 		"lower_alert_temp": 19,
 		"upper_control_temp": 22.25,
 		"upper_alert_temp": 22.5,
-		"remotes_cfg" : "remotes.json"
-
+		"remotes_cfg" : "remotes.json",
+		"log_file" : "hab_control.log",
+		"codesend" : "tbd"
 	}
 }
