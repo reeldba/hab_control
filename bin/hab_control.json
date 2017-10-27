@@ -14,6 +14,6 @@
 		"upper_alert_temp": 22.5,
 		"remotes_cfg" : "remotes.json",
 		"log_file" : "hab_control.log",
-		"codesend" : "tbd"
+		"codesend" : "/home/pi/rfoutlet/codesend"
 	}
 }
