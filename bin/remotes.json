@@ -1,19 +1,19 @@
 {
 	"remotes": [{
 		"remote_id": "0321-4",
-		"on": 1119539,
-		"on-pulse": 184,
-		"off": 1119548,
-		"off-pulse": 184,
+		"on": "1119539",
+		"on-pulse": "184",
+		"off": "1119548",
+		"off-pulse": "184",
 		"state_file" : "0321-4.state",
 		"watts" : 10,
 		"label" : "Infrared Lamp"
 	}, {
 		"remote_id": "0321-5",
-		"on": 1119683,
-		"on-pulse": 184,
-		"off": 1119692,
-		"off-pulse": 184,
+		"on": "1119683",
+		"on-pulse": "184",
+		"off": "1119692",
+		"off-pulse": "184",
 		"state_file" : "0321-5.state",
 		"watts" : 2,
 		"label" : "Heating Pad"
