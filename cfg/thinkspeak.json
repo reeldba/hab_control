@@ -1,0 +1,8 @@
+{
+	"thinkspeak" : {
+		"read_key": "GQ2QWJ82ZDJEPFQV",
+		"write_key": "Y52EA5PMQAZL7L03",
+		"channel_id": "204433",
+		"update_url": "https://api.thingspeak.com/update.json"
+	}
+}

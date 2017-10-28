@@ -1,0 +1,9 @@
+10-28 15:38 root         INFO     Startup
+10-28 15:38 root         INFO     Heating Pad
+10-28 15:38 root         DEBUG    reading Adafruit_DHT sensor
+10-28 15:38 root         DEBUG    attempt 0
+10-28 15:38 root         DEBUG    attempt 1
+10-28 15:38 root         DEBUG    RH= 54.80%, T= 22.90C
+10-28 15:38 root         CRITICAL T exceeds  22.50C upper alert limit
+10-28 15:38 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-28 15:38 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
