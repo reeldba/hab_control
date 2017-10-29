@@ -125,55 +125,61 @@ def main():
     UPPER_CONTROL_TEMP = config.upper_control_temp
 
     remotes = config.remotes
-
     heater_list = sorted(remotes, key=lambda k: k['watts'])
-
-    logging.info(heater_list[0].get('label'))
 
     humidity,temperature = read_sensor(SENSOR, SENSOR_PIN)
     
-    logging.debug("RH=%6.2f%%, T=%6.2fC",humidity, temperature)
+    logging.info("Reading is RH=%6.2f%%, T=%6.2fC",humidity, temperature)
 
     if temperature > UPPER_ALERT_TEMP:
-        logging.critical("T exceeds %6.2fC upper alert limit", UPPER_ALERT_TEMP)
+        logging.warn("temp %6.2fC exceeds alert limit %6.2fC", temperature, UPPER_ALERT_TEMP)
         subprocess.call([config.codesend, heater_list[0].get('off'), "-l", heater_list[0].get('off-pulse')])
         subprocess.call([config.codesend, heater_list[1].get('off'), "-l", heater_list[1].get('off-pulse')])
 
     if temperature > UPPER_CONTROL_TEMP and temperature <= UPPER_ALERT_TEMP:
-        logging.debug("T above %6.2fC uppert alert limit", UPPER_CONTROL_TEMP)
+        logging.info("temp %6.2fC exceeds upper control limit %6.2fC", temperature, UPPER_CONTROL_TEMP)
         subprocess.call([config.codesend, heater_list[0].get('off'), "-l", heater_list[0].get('off-pulse')])
         subprocess.call([config.codesend, heater_list[1].get('off'), "-l", heater_list[1].get('off-pulse')])
 
     if temperature >= TARGET_TEMP and temperature <= UPPER_CONTROL_TEMP:
-        logging.debug("T nominal. Heaters off")
-        logging.debug("Disable %s". heater_list[0].get('label'))
+        logging.info("temp %6.2fC in comfort range. all heaters off",temperature)
+        logging.debug("Disable %s", heater_list[0].get('label'))
         subprocess.call([config.codesend, heater_list[0].get('off'), "-l", heater_list[0].get('off-pulse')])
         subprocess.call([config.codesend, heater_list[1].get('off'), "-l", heater_list[1].get('off-pulse')])
 
     if temperature < TARGET_TEMP and temperature >= LOWER_CONTROL_TEMP:
-        logging.debug("T below target. Enable lowest power heat")
-        logging.debug("Enable %s". heater_list[0].get('label'))
-        logging.debug("Disable %s". heater_list[1].get('label'))
+        logging.info("temp %6.2fC below target %6.2fC. Enable lowest power heat", temperature, TARGET_TEMP)
+        logging.debug("Enable %s", heater_list[0].get('label'))
+        logging.debug("Disable %s", heater_list[1].get('label'))
         subprocess.call([config.codesend, heater_list[0].get('on'), "-l", heater_list[0].get('on-pulse')])
         subprocess.call([config.codesend, heater_list[1].get('off'), "-l", heater_list[1].get('off-pulse')])
 
     if temperature < LOWER_CONTROL_TEMP and temperature > LOWER_ALERT_TEMP:
+        logging.info('temp %6.2fC below %6.2fC, enable all heaters.',temperature, LOWER_CONTROL_TEMP)
         logging.debug("T below target. Enable all heaters")
-        logging.debug("Enable %s". heater_list[0].get('label'))
-        logging.debug("Enable %s". heater_list[1].get('label'))
+        logging.debug("Enable %s", heater_list[0].get('label'))
+        logging.debug("Enable %s", heater_list[1].get('label'))
         subprocess.call([config.codesend, heater_list[0].get('on'), "-l", heater_list[0].get('on-pulse')])
         subprocess.call([config.codesend, heater_list[1].get('on'), "-l", heater_list[1].get('on-pulse')])
 
 
+    # we need to send the turn on pulse because the 
+    # system could start with the hab below temp.
     if temperature <= LOWER_ALERT_TEMP:
-        logging.debug("T below lower alert. heaters not keeping up")
+        logging.info('%6.2fC below lower alert limit %6.2fC, heaters not keeping up.',temperature, LOWER_ALERT_TEMP)
+        logging.warning("T below lower alert. heaters not keeping up")
+        subprocess.call([config.codesend, heater_list[0].get('on'), "-l", heater_list[0].get('on-pulse')])
+        subprocess.call([config.codesend, heater_list[1].get('on'), "-l", heater_list[1].get('on-pulse')])
 
     update_thinkspeak({'humidity':humidity, 'temperature':temperature, 'message':'update'})
 
 if __name__ == "__main__":
     import sys
+    import traceback
     try:
         main()
         sys.exit(0)
-    except Exception as e:
+    except Exception , e:
+        traceback.print_exc(file=sys.stdout)
         raise e
+        sys.exit(-1)

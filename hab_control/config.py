@@ -3,12 +3,18 @@ sensor_id = 22
 sensor_pin = 23
 log_file = "hab_control.log"
 
-target_temperature = 26.7
-target_temp = 21.5
-lower_control_temp = 21.0
-lower_alert_temp = 19
-upper_control_temp = 22.25
-upper_alert_temp = 22.5
+# Hedgie's comfort zone is 72-82F (22.2-27.8C)
+# 75
+target_temp = 23.9              
+# 73.5
+lower_control_temp = 23.1       
+# 72
+lower_alert_temp = 22.2         
+# 74.5 
+upper_control_temp = 23.6       
+# 82
+upper_alert_temp = 27.7         
+
 codesend = "/home/pi/rfoutlet/codesend"
 
 remotes =  [{
