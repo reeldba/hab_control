@@ -15,15 +15,15 @@ def update_thinkspeak(measures):
     import requests
     from config import thinkspeak
 
+    payload={'api_key': thinkspeak.get('write_key')}
+    payload.update(measures)
+
+    logging.debug('updating thinkspeak with %s', payload)
+
     try:
         request=requests.post(
                 thinkspeak.get('update_url'),
-                data={
-                    'api_key': thinkspeak.get('write_key'),
-                    'field1' : measures.get('temperature'),
-                    'field2' : measures.get('humidity'),
-                    'field3' : measures.get('message')
-                    }
+                data=payload
                 )
     except Exception as err:
         sys.stderr.write("Error posting to thinkspeak. {0}".format(err.strerror))
@@ -69,34 +69,17 @@ def read_sensor(sensor, sensor_pin):
     return humidity, temperature
 
 
-def setup_logging(log_file_name, log_level):
+def heater_control(heater, command):
     """
-    set up logging
     """
-    import logging
-    from config import logsetup
-    from logging.handlers import RotatingFileHandler
+    import config
+    import subprocess
+
+    logging.info('heater %s to %s',heater.get('label'), command)
+
+    subprocess.call([config.codesend, heater.get(command), "-l", heater.get("{0}-pulse".format(command))])
+
     
-    logger = logging.getLogger()
-    logger.setLevel(log_level)
-    handler = logging.handlers.RotatingFileHandler(log_file_name,
-            maxBytes=logsetup.get('maxbytes'),
-            backupCount=logsetup.get('backupCount')
-            )
-    formatter = logging.Formatter(logsetup.get('format').get('format_string'),
-            logsetup.get('format').get('time_string')
-            )
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-
-    console=logging.StreamHandler()
-    console.setLevel(log_level)
-    console.setFormatter(formatter)
-    logger.addHandler(console)
-
-    return logger
-
-
 def main():
     """
     """
@@ -104,15 +87,6 @@ def main():
     import logging
     import subprocess
     import config 
-
-    #from heater_control import heater_control
-
-    global logging
-
-    #thinkspeak_file=cfg['hab_control'].get('thinkspeak')
-    #thinkspeak_cfg = get_config_json(thinkspeak_file)
-
-    #logging=setup_logging(config.log_file, logging.DEBUG)
 
     logging.info('Startup')
 
@@ -133,34 +107,44 @@ def main():
 
     if temperature > UPPER_ALERT_TEMP:
         logging.warn("temp %6.2fC exceeds alert limit %6.2fC", temperature, UPPER_ALERT_TEMP)
-        subprocess.call([config.codesend, heater_list[0].get('off'), "-l", heater_list[0].get('off-pulse')])
-        subprocess.call([config.codesend, heater_list[1].get('off'), "-l", heater_list[1].get('off-pulse')])
+        heater_list[0]['state']=0
+        heater_list[1]['state']=0
+        heater_control(heater_list[0],'off')
+        heater_control(heater_list[1],'off')
 
     if temperature > UPPER_CONTROL_TEMP and temperature <= UPPER_ALERT_TEMP:
         logging.info("temp %6.2fC exceeds upper control limit %6.2fC", temperature, UPPER_CONTROL_TEMP)
-        subprocess.call([config.codesend, heater_list[0].get('off'), "-l", heater_list[0].get('off-pulse')])
-        subprocess.call([config.codesend, heater_list[1].get('off'), "-l", heater_list[1].get('off-pulse')])
+        heater_list[0]['state']=0
+        heater_list[1]['state']=0
+        heater_control(heater_list[0],'off')
+        heater_control(heater_list[1],'off')
 
     if temperature >= TARGET_TEMP and temperature <= UPPER_CONTROL_TEMP:
         logging.info("temp %6.2fC in comfort range. all heaters off",temperature)
         logging.debug("Disable %s", heater_list[0].get('label'))
-        subprocess.call([config.codesend, heater_list[0].get('off'), "-l", heater_list[0].get('off-pulse')])
-        subprocess.call([config.codesend, heater_list[1].get('off'), "-l", heater_list[1].get('off-pulse')])
+        heater_list[0]['state']=0
+        heater_list[1]['state']=0
+        heater_control(heater_list[0],'off')
+        heater_control(heater_list[1],'off')
 
     if temperature < TARGET_TEMP and temperature >= LOWER_CONTROL_TEMP:
         logging.info("temp %6.2fC below target %6.2fC. Enable lowest power heat", temperature, TARGET_TEMP)
         logging.debug("Enable %s", heater_list[0].get('label'))
         logging.debug("Disable %s", heater_list[1].get('label'))
-        subprocess.call([config.codesend, heater_list[0].get('on'), "-l", heater_list[0].get('on-pulse')])
-        subprocess.call([config.codesend, heater_list[1].get('off'), "-l", heater_list[1].get('off-pulse')])
+        heater_list[0]['state']=1
+        heater_list[1]['state']=0
+        heater_control(heater_list[0],'on')
+        heater_control(heater_list[1],'off')
 
     if temperature < LOWER_CONTROL_TEMP and temperature > LOWER_ALERT_TEMP:
         logging.info('temp %6.2fC below %6.2fC, enable all heaters.',temperature, LOWER_CONTROL_TEMP)
         logging.debug("T below target. Enable all heaters")
         logging.debug("Enable %s", heater_list[0].get('label'))
         logging.debug("Enable %s", heater_list[1].get('label'))
-        subprocess.call([config.codesend, heater_list[0].get('on'), "-l", heater_list[0].get('on-pulse')])
-        subprocess.call([config.codesend, heater_list[1].get('on'), "-l", heater_list[1].get('on-pulse')])
+        heater_list[0]['state']=1
+        heater_list[1]['state']=1
+        heater_control(heater_list[0],'on')
+        heater_control(heater_list[1],'on')
 
 
     # we need to send the turn on pulse because the 
@@ -168,10 +152,14 @@ def main():
     if temperature <= LOWER_ALERT_TEMP:
         logging.info('%6.2fC below lower alert limit %6.2fC, heaters not keeping up.',temperature, LOWER_ALERT_TEMP)
         logging.warning("T below lower alert. heaters not keeping up")
-        subprocess.call([config.codesend, heater_list[0].get('on'), "-l", heater_list[0].get('on-pulse')])
-        subprocess.call([config.codesend, heater_list[1].get('on'), "-l", heater_list[1].get('on-pulse')])
+        heater_list[0]['state']=1
+        heater_list[1]['state']=1
+        heater_control(heater_list[0],'on')
+        heater_control(heater_list[1],'on')
 
-    update_thinkspeak({'humidity':humidity, 'temperature':temperature, 'message':'update'})
+    update_thinkspeak({'field2':humidity, 'field1':temperature, 
+        'field3' : heater_list[0]['state'],
+        'field4' : heater_list[1]['state']})
 
 if __name__ == "__main__":
     import sys

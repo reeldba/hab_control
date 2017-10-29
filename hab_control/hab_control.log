@@ -1941,3 +1941,290 @@
 10-29 11:50 root         DEBUG    Disable Infrared Lamp
 10-29 11:50 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
 10-29 11:50 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 11:55 root         INFO     Startup
+10-29 11:55 root         DEBUG    reading Adafruit_DHT sensor
+10-29 11:55 root         DEBUG    attempt 0
+10-29 11:55 root         INFO     Reading is RH= 29.20%, T= 11.60C
+10-29 11:55 root         INFO      11.60C below lower alert limit  22.20C, heaters not keeping up.
+10-29 11:55 root         WARNING  T below lower alert. heaters not keeping up
+10-29 11:55 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 11:55 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:00 root         INFO     Startup
+10-29 12:00 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:00 root         DEBUG    attempt 0
+10-29 12:00 root         INFO     Reading is RH= 57.30%, T= 23.70C
+10-29 12:00 root         INFO     temp  23.70C exceeds upper control limit  23.60C
+10-29 12:00 root         INFO     temp  23.70C below target  23.90C. Enable lowest power heat
+10-29 12:00 root         DEBUG    Enable Heating Pad
+10-29 12:00 root         DEBUG    Disable Infrared Lamp
+10-29 12:00 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:00 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:05 root         INFO     Startup
+10-29 12:05 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:05 root         DEBUG    attempt 0
+10-29 12:05 root         INFO     Reading is RH= 55.70%, T= 24.20C
+10-29 12:05 root         INFO     temp  24.20C exceeds upper control limit  23.60C
+10-29 12:05 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:05 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:10 root         INFO     Startup
+10-29 12:10 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:10 root         DEBUG    attempt 0
+10-29 12:10 root         DEBUG    attempt 1
+10-29 12:10 root         INFO     Reading is RH= 55.20%, T= 24.40C
+10-29 12:10 root         INFO     temp  24.40C exceeds upper control limit  23.60C
+10-29 12:10 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:10 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:15 root         INFO     Startup
+10-29 12:15 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:15 root         DEBUG    attempt 0
+10-29 12:15 root         DEBUG    attempt 1
+10-29 12:15 root         INFO     Reading is RH= 55.00%, T= 24.30C
+10-29 12:15 root         INFO     temp  24.30C exceeds upper control limit  23.60C
+10-29 12:15 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:15 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:20 root         INFO     Startup
+10-29 12:20 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:20 root         DEBUG    attempt 0
+10-29 12:20 root         INFO     Reading is RH= 56.10%, T= 24.10C
+10-29 12:20 root         INFO     temp  24.10C exceeds upper control limit  23.60C
+10-29 12:20 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:20 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:25 root         INFO     Startup
+10-29 12:25 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:25 root         DEBUG    attempt 0
+10-29 12:25 root         INFO     Reading is RH= 55.80%, T= 23.90C
+10-29 12:25 root         INFO     temp  23.90C exceeds upper control limit  23.60C
+10-29 12:25 root         INFO     temp  23.90C below target  23.90C. Enable lowest power heat
+10-29 12:25 root         DEBUG    Enable Heating Pad
+10-29 12:25 root         DEBUG    Disable Infrared Lamp
+10-29 12:25 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:25 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:30 root         INFO     Startup
+10-29 12:30 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:30 root         DEBUG    attempt 0
+10-29 12:30 root         INFO     Reading is RH= 56.10%, T= 23.90C
+10-29 12:30 root         INFO     temp  23.90C exceeds upper control limit  23.60C
+10-29 12:30 root         INFO     temp  23.90C below target  23.90C. Enable lowest power heat
+10-29 12:30 root         DEBUG    Enable Heating Pad
+10-29 12:30 root         DEBUG    Disable Infrared Lamp
+10-29 12:30 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:30 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:35 root         INFO     Startup
+10-29 12:35 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:35 root         DEBUG    attempt 0
+10-29 12:35 root         INFO     Reading is RH= 55.20%, T= 24.20C
+10-29 12:35 root         INFO     temp  24.20C exceeds upper control limit  23.60C
+10-29 12:35 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:35 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:40 root         INFO     Startup
+10-29 12:40 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:40 root         DEBUG    attempt 0
+10-29 12:40 root         INFO     Reading is RH= 55.20%, T= 24.20C
+10-29 12:40 root         INFO     temp  24.20C exceeds upper control limit  23.60C
+10-29 12:40 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:40 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:45 root         INFO     Startup
+10-29 12:45 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:45 root         DEBUG    attempt 0
+10-29 12:45 root         INFO     Reading is RH= 54.60%, T= 24.30C
+10-29 12:45 root         INFO     temp  24.30C exceeds upper control limit  23.60C
+10-29 12:45 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:45 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:50 root         INFO     Startup
+10-29 12:50 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:50 root         DEBUG    attempt 0
+10-29 12:50 root         INFO     Reading is RH= 55.00%, T= 24.10C
+10-29 12:50 root         INFO     temp  24.10C exceeds upper control limit  23.60C
+10-29 12:50 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:50 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 12:55 root         INFO     Startup
+10-29 12:55 root         DEBUG    reading Adafruit_DHT sensor
+10-29 12:55 root         DEBUG    attempt 0
+10-29 12:55 root         DEBUG    attempt 1
+10-29 12:55 root         INFO     Reading is RH= 55.60%, T= 23.80C
+10-29 12:55 root         INFO     temp  23.80C exceeds upper control limit  23.60C
+10-29 12:55 root         INFO     temp  23.80C below target  23.90C. Enable lowest power heat
+10-29 12:55 root         DEBUG    Enable Heating Pad
+10-29 12:55 root         DEBUG    Disable Infrared Lamp
+10-29 12:55 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 12:55 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:00 root         INFO     Startup
+10-29 13:00 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:00 root         DEBUG    attempt 0
+10-29 13:00 root         INFO     Reading is RH= 55.90%, T= 23.80C
+10-29 13:00 root         INFO     temp  23.80C exceeds upper control limit  23.60C
+10-29 13:00 root         INFO     temp  23.80C below target  23.90C. Enable lowest power heat
+10-29 13:00 root         DEBUG    Enable Heating Pad
+10-29 13:00 root         DEBUG    Disable Infrared Lamp
+10-29 13:00 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:00 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:05 root         INFO     Startup
+10-29 13:05 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:05 root         DEBUG    attempt 0
+10-29 13:05 root         INFO     Reading is RH= 55.00%, T= 24.10C
+10-29 13:05 root         INFO     temp  24.10C exceeds upper control limit  23.60C
+10-29 13:05 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:05 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:10 root         INFO     Startup
+10-29 13:10 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:10 root         DEBUG    attempt 0
+10-29 13:10 root         INFO     Reading is RH= 54.40%, T= 24.40C
+10-29 13:10 root         INFO     temp  24.40C exceeds upper control limit  23.60C
+10-29 13:10 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:10 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:15 root         INFO     Startup
+10-29 13:15 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:15 root         DEBUG    attempt 0
+10-29 13:15 root         DEBUG    attempt 1
+10-29 13:15 root         INFO     Reading is RH= 54.40%, T= 24.30C
+10-29 13:15 root         INFO     temp  24.30C exceeds upper control limit  23.60C
+10-29 13:15 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:15 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:20 root         INFO     Startup
+10-29 13:20 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:20 root         DEBUG    attempt 0
+10-29 13:20 root         DEBUG    attempt 1
+10-29 13:20 root         INFO     Reading is RH= 54.70%, T= 24.10C
+10-29 13:20 root         INFO     temp  24.10C exceeds upper control limit  23.60C
+10-29 13:20 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:20 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:25 root         INFO     Startup
+10-29 13:25 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:25 root         DEBUG    attempt 0
+10-29 13:25 root         INFO     Reading is RH= 54.70%, T= 24.10C
+10-29 13:25 root         INFO     temp  24.10C exceeds upper control limit  23.60C
+10-29 13:25 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:25 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:30 root         INFO     Startup
+10-29 13:30 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:30 root         DEBUG    attempt 0
+10-29 13:30 root         DEBUG    attempt 1
+10-29 13:30 root         INFO     Reading is RH= 56.20%, T= 23.60C
+10-29 13:30 root         INFO     temp  23.60C exceeds upper control limit  23.60C
+10-29 13:30 root         INFO     temp  23.60C below target  23.90C. Enable lowest power heat
+10-29 13:30 root         DEBUG    Enable Heating Pad
+10-29 13:30 root         DEBUG    Disable Infrared Lamp
+10-29 13:30 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:30 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:35 root         INFO     Startup
+10-29 13:35 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:35 root         DEBUG    attempt 0
+10-29 13:35 root         DEBUG    attempt 1
+10-29 13:35 root         INFO     Reading is RH= 56.40%, T= 23.60C
+10-29 13:35 root         INFO     temp  23.60C exceeds upper control limit  23.60C
+10-29 13:35 root         INFO     temp  23.60C below target  23.90C. Enable lowest power heat
+10-29 13:35 root         DEBUG    Enable Heating Pad
+10-29 13:35 root         DEBUG    Disable Infrared Lamp
+10-29 13:35 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:35 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:39 root         INFO     Startup
+10-29 13:39 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:39 root         DEBUG    attempt 0
+10-29 13:39 root         INFO     Reading is RH= 55.80%, T= 23.90C
+10-29 13:39 root         INFO     temp  23.90C exceeds upper control limit  23.60C
+10-29 13:39 root         DEBUG    enter heater_control, heater={'on': '1119683', 'state_file': '0321-5.state', 'off': '1119692', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-5', 'watts': 2, 'label': 'Heating Pad'}, command=off
+10-29 13:39 root         INFO     Startup
+10-29 13:39 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:39 root         DEBUG    attempt 0
+10-29 13:39 root         INFO     Reading is RH= 55.80%, T= 23.90C
+10-29 13:39 root         INFO     temp  23.90C exceeds upper control limit  23.60C
+10-29 13:39 root         DEBUG    enter heater_control, heater={'on': '1119683', 'state_file': '0321-5.state', 'off': '1119692', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-5', 'watts': 2, 'label': 'Heating Pad'}, command=off
+10-29 13:39 root         DEBUG    enter heater_control, heater={'on': '1119539', 'state_file': '0321-4.state', 'off': '1119548', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-4', 'watts': 10, 'label': 'Infrared Lamp'}, command=off
+10-29 13:39 root         INFO     temp  23.90C below target  23.90C. Enable lowest power heat
+10-29 13:39 root         DEBUG    Enable Heating Pad
+10-29 13:39 root         DEBUG    Disable Infrared Lamp
+10-29 13:39 root         DEBUG    enter heater_control, heater={'on': '1119683', 'state_file': '0321-5.state', 'off': '1119692', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-5', 'watts': 2, 'label': 'Heating Pad'}, command=on
+10-29 13:39 root         DEBUG    enter heater_control, heater={'on': '1119539', 'state_file': '0321-4.state', 'off': '1119548', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-4', 'watts': 10, 'label': 'Infrared Lamp'}, command=off
+10-29 13:39 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:39 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:40 root         INFO     Startup
+10-29 13:40 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:40 root         DEBUG    attempt 0
+10-29 13:40 root         INFO     Reading is RH= 55.40%, T= 24.00C
+10-29 13:40 root         INFO     temp  24.00C exceeds upper control limit  23.60C
+10-29 13:40 root         DEBUG    enter heater_control, heater={'on': '1119683', 'state_file': '0321-5.state', 'off': '1119692', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-5', 'watts': 2, 'label': 'Heating Pad'}, command=off
+10-29 13:40 root         DEBUG    enter heater_control, heater={'on': '1119539', 'state_file': '0321-4.state', 'off': '1119548', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-4', 'watts': 10, 'label': 'Infrared Lamp'}, command=off
+10-29 13:40 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:40 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:40 root         INFO     Startup
+10-29 13:40 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:40 root         DEBUG    attempt 0
+10-29 13:40 root         INFO     Reading is RH= 55.40%, T= 24.00C
+10-29 13:40 root         INFO     temp  24.00C exceeds upper control limit  23.60C
+10-29 13:40 root         INFO     heater Heating Pad to off
+10-29 13:40 root         DEBUG    enter heater_control, heater={'on': '1119683', 'state_file': '0321-5.state', 'off': '1119692', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-5', 'watts': 2, 'label': 'Heating Pad'}, command=off
+10-29 13:40 root         INFO     heater Infrared Lamp to off
+10-29 13:40 root         DEBUG    enter heater_control, heater={'on': '1119539', 'state_file': '0321-4.state', 'off': '1119548', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-4', 'watts': 10, 'label': 'Infrared Lamp'}, command=off
+10-29 13:40 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:40 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:41 root         INFO     Startup
+10-29 13:41 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:41 root         DEBUG    attempt 0
+10-29 13:41 root         INFO     Reading is RH= 55.00%, T= 24.10C
+10-29 13:41 root         INFO     temp  24.10C exceeds upper control limit  23.60C
+10-29 13:41 root         INFO     heater Heating Pad to off
+10-29 13:41 root         DEBUG    enter heater_control, heater={'on': '1119683', 'state_file': '0321-5.state', 'off': '1119692', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-5', 'watts': 2, 'label': 'Heating Pad'}, command=off
+10-29 13:41 root         INFO     heater Infrared Lamp to off
+10-29 13:41 root         DEBUG    enter heater_control, heater={'on': '1119539', 'state_file': '0321-4.state', 'off': '1119548', 'on-pulse': '184', 'off-pulse': '184', 'remote_id': '0321-4', 'watts': 10, 'label': 'Infrared Lamp'}, command=off
+10-29 13:41 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:41 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:42 root         INFO     Startup
+10-29 13:42 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:42 root         DEBUG    attempt 0
+10-29 13:42 root         INFO     Reading is RH= 54.80%, T= 24.20C
+10-29 13:42 root         INFO     temp  24.20C exceeds upper control limit  23.60C
+10-29 13:42 root         INFO     heater Heating Pad to off
+10-29 13:42 root         INFO     heater Infrared Lamp to off
+10-29 13:42 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:42 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:45 root         INFO     Startup
+10-29 13:45 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:45 root         DEBUG    attempt 0
+10-29 13:45 root         INFO     Reading is RH= 54.40%, T= 24.20C
+10-29 13:45 root         INFO     temp  24.20C exceeds upper control limit  23.60C
+10-29 13:45 root         INFO     heater Heating Pad to off
+10-29 13:45 root         INFO     heater Infrared Lamp to off
+10-29 13:45 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:45 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 13:58 root         INFO     Startup
+10-29 13:58 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:58 root         DEBUG    attempt 0
+10-29 13:58 root         INFO     Reading is RH= 55.30%, T= 23.70C
+10-29 13:58 root         INFO     temp  23.70C exceeds upper control limit  23.60C
+10-29 13:58 root         INFO     heater Heating Pad to off
+10-29 13:58 root         INFO     heater Infrared Lamp to off
+10-29 13:58 root         INFO     temp  23.70C below target  23.90C. Enable lowest power heat
+10-29 13:58 root         DEBUG    Enable Heating Pad
+10-29 13:58 root         DEBUG    Disable Infrared Lamp
+10-29 13:58 root         INFO     heater Heating Pad to on
+10-29 13:58 root         INFO     heater Infrared Lamp to off
+10-29 13:59 root         INFO     Startup
+10-29 13:59 root         DEBUG    reading Adafruit_DHT sensor
+10-29 13:59 root         DEBUG    attempt 0
+10-29 13:59 root         INFO     Reading is RH= 55.40%, T= 23.70C
+10-29 13:59 root         INFO     temp  23.70C exceeds upper control limit  23.60C
+10-29 13:59 root         INFO     heater Heating Pad to off
+10-29 13:59 root         INFO     heater Infrared Lamp to off
+10-29 13:59 root         INFO     temp  23.70C below target  23.90C. Enable lowest power heat
+10-29 13:59 root         DEBUG    Enable Heating Pad
+10-29 13:59 root         DEBUG    Disable Infrared Lamp
+10-29 13:59 root         INFO     heater Heating Pad to on
+10-29 13:59 root         INFO     heater Infrared Lamp to off
+10-29 13:59 root         DEBUG    updating thinkspeak with {'field2': 55.400001525878906, 'field3': 1, 'api_key': 'Y52EA5PMQAZL7L03', 'field4': 0, 'field1': 23.700000762939453}
+10-29 13:59 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 13:59 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None
+10-29 14:00 root         INFO     Startup
+10-29 14:00 root         DEBUG    reading Adafruit_DHT sensor
+10-29 14:00 root         DEBUG    attempt 0
+10-29 14:00 root         INFO     Reading is RH= 56.00%, T= 23.70C
+10-29 14:00 root         INFO     temp  23.70C exceeds upper control limit  23.60C
+10-29 14:00 root         INFO     heater Heating Pad to off
+10-29 14:00 root         INFO     heater Infrared Lamp to off
+10-29 14:00 root         INFO     temp  23.70C below target  23.90C. Enable lowest power heat
+10-29 14:00 root         DEBUG    Enable Heating Pad
+10-29 14:00 root         DEBUG    Disable Infrared Lamp
+10-29 14:00 root         INFO     heater Heating Pad to on
+10-29 14:00 root         INFO     heater Infrared Lamp to off
+10-29 14:00 root         DEBUG    updating thinkspeak with {'field2': 56.0, 'field3': 1, 'api_key': 'Y52EA5PMQAZL7L03', 'field4': 0, 'field1': 23.700000762939453}
+10-29 14:00 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.thingspeak.com
+10-29 14:00 requests.packages.urllib3.connectionpool DEBUG    https://api.thingspeak.com:443 "POST /update.json HTTP/1.1" 200 None

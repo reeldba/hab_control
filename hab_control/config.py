@@ -25,7 +25,8 @@ remotes =  [{
 		"off-pulse": "184",
 		"state_file" : "0321-4.state",
 		"watts" : 10,
-		"label" : "Infrared Lamp"
+		"label" : "Infrared Lamp", 
+                "state" :  0
 	}, {
 		"remote_id": "0321-5",
 		"on": "1119683",
@@ -34,7 +35,8 @@ remotes =  [{
 		"off-pulse": "184",
 		"state_file" : "0321-5.state",
 		"watts" : 2,
-		"label" : "Heating Pad"
+		"label" : "Heating Pad", 
+                "state" : 0
 	}]
 
 thinkspeak = {
