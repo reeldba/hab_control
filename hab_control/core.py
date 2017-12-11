@@ -157,7 +157,7 @@ def main():
         heater_control(heater_list[0],'on')
         heater_control(heater_list[1],'on')
 
-    update_thinkspeak({'field2':humidity, 'field1':temperature, 
+    update_thinkspeak({'field2': '{0:5.2f}'.format(humidity), 'field1':'{0:5.2f}'.format(temperature), 
         'field3' : heater_list[0]['state'],
         'field4' : heater_list[1]['state']})
 
